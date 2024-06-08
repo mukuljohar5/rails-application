@@ -19,6 +19,7 @@ module Admin
 
     def create
       @user = User.new(user_params)
+      email_send_to_user = @user.send_email
 
       respond_to do |format|
         if @user.save
