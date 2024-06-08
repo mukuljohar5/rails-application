@@ -46,6 +46,7 @@ module Admin
 
     def destroy
       @user.destroy!
+      raise "User not destoryed" if @user.empty?
 
       respond_to do |format|
         format.html { redirect_to users_url, notice: "User was successfully deleted." }
