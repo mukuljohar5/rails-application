@@ -52,8 +52,8 @@ module Admin
       end
     end
 
-    def email
-      UserMailer.with(user: User.first).welcome_email.deliver_now
+    def send_email_to_user
+      user = UserMailer.with(user: User.first).welcome_email.deliver_now
     end
 
     private
