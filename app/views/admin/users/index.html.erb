@@ -1,0 +1,40 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Users</h1>
+
+<div id="users">
+  <% @users.each do |user| %>
+    <%= render user %>
+    <p>
+      <%= link_to "Show this user", user %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New user", new_user_path %>
+<%= link_to "Log Out", destroy_user_session_path, data: { turbo_method: :delete } %>
+<br>
+<button class="click-me">Click</button>
+<input class="name" />
+<script>
+$(document).ready(function() {
+  $('.click-me').click(function(){
+    var name = $('.name').val()
+    $.ajax({
+      url: '/click_button', 
+      method: 'get',
+      dataType: 'json', 
+      data: {name: name},
+      success: function() {
+        console.log('Success:');
+      },
+      error: function() {
+        console.error('Error:');
+      }
+    });
+  })
+  
+});  
+
+
+</script>

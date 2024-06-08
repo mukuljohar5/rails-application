@@ -1,0 +1,42 @@
+.log-in-head{
+    font-family: bahnschrift;
+    color: #ff0090;
+}
+
+.main-row{
+    margin-top: 200px;
+}
+
+.log-in-card{
+    padding-top: 10px;
+    text-align: center;
+}
+
+.error-message{
+    color: red;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.action-buttons{
+    background-color: #00e1ff;
+    color: white;
+    font-weight: bold;
+}
+
+.action-buttons:hover{
+    background-color: #00b3ff;
+    color: #ffffff;
+}
+
+.forgot-password{
+    margin-top: 10px;
+}
+
+.log-in{
+    margin-top: 10px;
+}
+
+.hello{
+    display: block;
+}
